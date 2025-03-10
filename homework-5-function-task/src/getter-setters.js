@@ -1,5 +1,4 @@
 export class Person {
-    #privateName;
 
     constructor(name, lastName, street, city, zip) {
         this.privateName = name;

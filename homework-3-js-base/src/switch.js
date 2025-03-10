@@ -10,4 +10,5 @@ switch (value) {
     case 8:
         console.log(value, ' is biggest number');
         break;
+
 }
