@@ -1,9 +1,9 @@
-import { test, expect } from '@playwright/test';
+import { test } from '@playwright/test';
 
 test('1 test', async ({ page }) => {
-  sayHello("Robot", "18")
+  sayHello("Robot", "Android", "18")
 });
 
-function sayHello(name, age) {
-  console.log(`Hello ${name} with your age ${age}`)
+function sayHello(name, lastname, age) {
+  console.log(`Hello ${name} ${lastname} with your age ${age}`)
 }
