@@ -1,4 +1,4 @@
-const sumOfArray = (numberArray: (string | number)[]) : string | number => {
+const sumOfArray = (numberArray: (string[] | number[])) : string | number => {
     let sumOfElements = 0;
     let str = '';
     let containsNumbers = false;

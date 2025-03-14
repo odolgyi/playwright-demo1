@@ -1,4 +1,4 @@
-function sumOfArrayFunction(numberArray: (string | number)[]): string | number {
+function sumOfArrayFunction(numberArray: (string[] | number[])): string | number {
     let sumOfElements = 0;
     let str = '';
     let containsNumbers = false;
