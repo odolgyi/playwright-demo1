@@ -1,6 +1,7 @@
 import { Perforator } from './perforator';
+import { IWired } from './iwired';
 
-export class ElectricPerforator extends Perforator {
+export class ElectricPerforator extends Perforator implements IWired {
 
     private maxSpeed: number;
 
@@ -19,5 +20,9 @@ export class ElectricPerforator extends Perforator {
         } else {
             console.log(`${this.brand}. Режим швидкоті свердління не може бути більшим, ніж Max Speed=${this.maxSpeed}.`);
         }
+    }
+
+    public getPower(): void {
+        console.log(`Підключіть ${this.brand} пристрій до мережі 220 В`);
     }
 }
