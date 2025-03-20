@@ -1,7 +1,7 @@
 import { Perforator } from './perforator';
-import * as console from 'node:console';
+import { IWired } from './iwired';
 
-export class CordlessPerforator extends Perforator {
+export class CordlessPerforator extends Perforator implements IWired  {
     private _batteryCapacity: number;
     private _maxSpeed: number;
 
@@ -12,7 +12,7 @@ export class CordlessPerforator extends Perforator {
     }
 
     public perforate(): void {
-        console.log(`${this.brand} (Акумуляторний, ${this.batteryCapacity}mAh): Починає свердління завдяки акамулятору!`);
+        console.log(`${this.brand} (Акумулятор, ${this.batteryCapacity}mAh): Починає свердління завдяки акумулятору!`);
     }
 
     public controlOfRotationalSpeed(speed: number): void {
@@ -29,5 +29,9 @@ export class CordlessPerforator extends Perforator {
 
     public get maxSpeed(): number {
         return this._maxSpeed;
+    }
+
+    public getPower(): void {
+        console.log(`Підключіть до ${this.brand} пристрою акумулятор`);
     }
 }
