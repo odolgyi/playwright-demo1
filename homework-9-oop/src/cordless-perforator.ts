@@ -1,7 +1,6 @@
 import { Perforator } from './perforator';
-import { IWired } from './iwired';
 
-export class CordlessPerforator extends Perforator implements IWired  {
+export class CordlessPerforator extends Perforator {
     private _batteryCapacity: number;
     private _maxSpeed: number;
 
@@ -29,9 +28,5 @@ export class CordlessPerforator extends Perforator implements IWired  {
 
     public get maxSpeed(): number {
         return this._maxSpeed;
-    }
-
-    public getPower(): void {
-        console.log(`Підключіть до ${this.brand} пристрою акумулятор`);
     }
 }

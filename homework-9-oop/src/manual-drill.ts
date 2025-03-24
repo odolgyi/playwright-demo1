@@ -1,7 +1,6 @@
 import { Perforator } from './perforator';
-import { IWired } from './iwired';
 
-export class ManualDrill extends Perforator implements IWired {
+export class ManualDrill extends Perforator {
     public constructor(brand: string) {
         super(brand);
     }
@@ -12,9 +11,5 @@ export class ManualDrill extends Perforator implements IWired {
 
     public controlOfRotationalSpeed(): void {
         console.log(`${this.brand} Ваша фізична сила визначає режим обертання`);
-    }
-
-    public getPower(): void {
-        console.log(`Пристрій ${this.brand} потребує лише фізичну силу`);
     }
 }
