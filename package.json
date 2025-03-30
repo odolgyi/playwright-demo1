@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/odolgyi/playwright-demo1#readme",
   "devDependencies": {
-    "@types/node": "^22.12.0"
+    "@types/node": "^22.12.0",
+    "vitest": "^3.0.9"
   }
 }
