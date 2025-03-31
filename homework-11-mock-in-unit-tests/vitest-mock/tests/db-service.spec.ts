@@ -27,6 +27,7 @@ describe('Drill Service Unit Tests', () => {
             findHammerPerforator: vi.fn(),
             findMaxPowerDrill: vi.fn()
         } as unknown as Mocked<DbConnectionExample>;
+
         mockedDbConnection.findManualPerforator.mockReturnValue(
             expectedResult.filter(drill => drill instanceof ManualDrill)
         );
@@ -49,6 +50,7 @@ describe('Drill Service Unit Tests', () => {
             expect(result).toEqual([new ManualDrill('Stanley', 1)]);
             expect(mockedDbConnection.findManualPerforator).toHaveBeenCalledTimes(1);
         });
+
         test('Find only Electric Perforator', () => {
             const result = service.findElectricPerforator();
             expect(result).toEqual(
@@ -58,6 +60,7 @@ describe('Drill Service Unit Tests', () => {
                 ]);
             expect(mockedDbConnection.findElectricPerforator).toHaveBeenCalledTimes(1);
         });
+
         test('Find only Cordless Perforator', () => {
             const result = service.findCordlessPerforator();
             expect(result).toEqual(
@@ -66,6 +69,7 @@ describe('Drill Service Unit Tests', () => {
                 ]);
             expect(mockedDbConnection.findCordlessPerforator).toHaveBeenCalledTimes(1);
         });
+
         test('Find only Hammer Perforator', () => {
             const result = service.findHammerPerforator();
             expect(result).toEqual(
@@ -75,6 +79,7 @@ describe('Drill Service Unit Tests', () => {
             expect(mockedDbConnection.findHammerPerforator).toHaveBeenCalledTimes(1);
         });
     });
+
     describe('Find the most powerful drill', () => {
         test('Get the most powerful drill', () => {
             const result = service.findMaxPowerDrill();
